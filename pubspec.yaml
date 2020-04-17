@@ -1,0 +1,59 @@
+name: isuzu
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  flutter_svg:
+  shared_preferences:
+  flutter_launcher_icons:
+  flutter_open_whatsapp:
+  webview_flutter:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+module:
+  androidX: true
+
+flutter_icons:
+  android: "launcher_icon" 
+  ios: true
+  image_path: "assets/images/logo/logo.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/logo/
+    - assets/images/promo/
+    - assets/images/mpv/
+    - assets/images/suv/
+    - assets/images/pickup/
+    - assets/images/commercial/
+    - assets/images/truck/
+    - assets/images/tractor/
+
+  fonts:
+    - family: Oswald
+      fonts:
+        - asset: assets/fonts/Oswald-Regular.ttf
+        - asset: assets/fonts/Oswald-ExtraLight.ttf
+          weight: 100
+        # - asset: assets/fonts/Oswald-Italic.ttf
+        #   style: italic
+        - asset: assets/fonts/Oswald-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Oswald-Bold.ttf
+          weight: 700
+    # - family: Trajan Pro
+    #   fonts:
+    #     - asset: assets/fonts/TrajanPro.ttf
+    #     - asset: assets/fonts/TrajanPro_Bold.ttf
+    #       weight: 700
