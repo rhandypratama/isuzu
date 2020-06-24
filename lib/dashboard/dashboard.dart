@@ -19,235 +19,240 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: Container(
-            color: Colors.white,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                // _paypalCard(context),
-                _headerHome(context),
-                // _menuUtama(context),
+        body: Stack(
+          children: <Widget>[
+            SingleChildScrollView(
+            child: Container(
+              color: Colors.white,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  // _paypalCard(context),
+                  _headerHome(context),
+                  // _menuUtama(context),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
-                      child: InkWell(
-                        onTap: () {
-                          navigationManager(context, CatalogHome(), isPushReplaced: false);
-                        },
-                        child: Container(
-                          // alignment: Alignment(1.0, 1.0),
-                          height: 55,
-                          width: 180,
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(16.0),
-                              bottomRight: Radius.circular(16.0))),
-                          child: Center(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              mainAxisSize: MainAxisSize.max,
-                              children: <Widget>[
-                                Text(
-                                  "ISUZU CARS",
-                                  style: TextStyle(fontSize: 20.0, color: Colors.white, fontFamily: "Oswald"),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Icon(
-                                  Icons.arrow_forward,
-                                  color: Colors.white,
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                              ],
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                        child: InkWell(
+                          onTap: () {
+                            navigationManager(context, CatalogHome(), isPushReplaced: false);
+                          },
+                          child: Container(
+                            // alignment: Alignment(1.0, 1.0),
+                            height: 55,
+                            width: 180,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(16.0),
+                                bottomRight: Radius.circular(16.0))),
+                            child: Center(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                mainAxisSize: MainAxisSize.max,
+                                children: <Widget>[
+                                  Text(
+                                    "ISUZU CARS",
+                                    style: TextStyle(fontSize: 20.0, color: Colors.white, fontFamily: "Oswald"),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(
+                                    width: 20,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
-                      child: InkWell(
-                        onTap: () {
-                          navigationManager(context, WebViewExample() , isPushReplaced: false);
-                        },
-                        child: Container(
-                          height: 55,
-                          width: 190,
-                          decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(16.0),
-                              bottomLeft: Radius.circular(16.0))),
-                          child: Center(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              mainAxisSize: MainAxisSize.max,
-                              children: <Widget>[
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Text(
-                                  "CREDIT SIMULATION",
-                                  style: TextStyle(fontSize: 20.0, color: Colors.white, fontFamily: "Oswald"),
-                                ),
-                              ],
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                        child: InkWell(
+                          onTap: () {
+                            navigationManager(context, WebViewExample() , isPushReplaced: false);
+                          },
+                          child: Container(
+                            height: 55,
+                            width: 190,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(16.0),
+                                bottomLeft: Radius.circular(16.0))),
+                            child: Center(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.max,
+                                children: <Widget>[
+                                  SizedBox(
+                                    width: 20,
+                                  ),
+                                  Text(
+                                    "CREDIT SIMULATION",
+                                    style: TextStyle(fontSize: 20.0, color: Colors.white, fontFamily: "Oswald"),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
 
 
-                  ],
-                ),
+                    ],
+                  ),
 
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(left: 12.0, right: 10.0, bottom: 10.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          dynamicText('DEAL PROMO',
-                            fontSize: 16,
-                            // fontWeight: FontWeight.w700,
-                            fontFamily: "Oswald",
-                            color: Colors.black87),
-                          dynamicText('VIEW ALL',
-                          fontSize: 12,
-                          // fontWeight: FontWeight.w700,
-                          fontFamily: "Oswald",
-                          color: Colors.orange[800]
-                            ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.width / 2.4,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: <Widget>[
-                          _tipsCard(
-                              "PENTINGNYA TEKNOLOGI MIMAMORI PADA KENDARAAN KOMERSIAL",
-                              "assets/images/promo/promo-1.jpg",
-                              TipsContent.promo1),
-                          _tipsCard(
-                              "ISUZU KUASAI BANYAK PASAR GLOBAL",
-                              "assets/images/promo/promo-2.jpg",
-                              TipsContent.promo2),
-                          _tipsCard(
-                              "ISUZU SANGAT SIAP MENGHADAPI STANDAR EURO 4",
-                              "assets/images/promo/promo-3.jpg",
-                              TipsContent.promo3),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                
-                SizedBox(height: 10.0),
-
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(left: 12.0, right: 10.0, bottom: 10.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          dynamicText('NEWS & EVENT',
-                            fontSize: 16,
-                            // fontWeight: FontWeight.w700,
-                            fontFamily: "Oswald",
-                            color: Colors.black87),
-                          dynamicText('VIEW ALL',
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(left: 12.0, right: 10.0, bottom: 10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            dynamicText('DEAL PROMO',
+                              fontSize: 16,
+                              // fontWeight: FontWeight.w700,
+                              fontFamily: "Oswald",
+                              color: Colors.black87),
+                            dynamicText('VIEW ALL',
                             fontSize: 12,
                             // fontWeight: FontWeight.w700,
                             fontFamily: "Oswald",
-                            color: Colors.orange[800]),
-                        ],
+                            color: Colors.orange[800]
+                              ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.width / 2.4,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: <Widget>[
-                          _tipsCard(
-                              "PENTINGNYA TEKNOLOGI MIMAMORI PADA KENDARAAN KOMERSIAL",
-                              "assets/images/promo/promo-3.jpg",
-                              TipsContent.promo1),
-                          _tipsCard(
-                              "ISUZU KUASAI BANYAK PASAR GLOBAL",
-                              "assets/images/promo/promo-1.jpg",
-                              TipsContent.promo2),
-                          _tipsCard(
-                              "ISUZU SANGAT SIAP MENGHADAPI STANDAR EURO 4",
-                              "assets/images/promo/promo-2.jpg",
-                              TipsContent.promo3),
-                        ],
+                      Container(
+                        height: MediaQuery.of(context).size.width / 2.4,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: <Widget>[
+                            _tipsCard(
+                                "PENTINGNYA TEKNOLOGI MIMAMORI PADA KENDARAAN KOMERSIAL",
+                                "assets/images/promo/promo-1.jpg",
+                                TipsContent.promo1),
+                            _tipsCard(
+                                "ISUZU KUASAI BANYAK PASAR GLOBAL",
+                                "assets/images/promo/promo-2.jpg",
+                                TipsContent.promo2),
+                            _tipsCard(
+                                "ISUZU SANGAT SIAP MENGHADAPI STANDAR EURO 4",
+                                "assets/images/promo/promo-3.jpg",
+                                TipsContent.promo3),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
+                  
+                  SizedBox(height: 10.0),
 
-                // Column(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   crossAxisAlignment: CrossAxisAlignment.start,
-                //   children: <Widget>[
-                //     Padding(
-                //       padding: EdgeInsets.only(left: 12.0, right: 10.0, bottom: 10.0),
-                //       child: Row(
-                //         children: <Widget>[
-                //           dynamicText('News & Event',
-                //             fontSize: 16,
-                //             fontWeight: FontWeight.w700,
-                //             color: Colors.black87),
-                //         ],
-                //       ),
-                //     ),
-                //     Container(
-                //       height: MediaQuery.of(context).size.width / 2.2,
-                //       child: ListView(
-                //         scrollDirection: Axis.horizontal,
-                //         children: <Widget>[
-                //           _tipsCard(
-                //               "Tips bekerja secara fleksibel di Paruhwaktu",
-                //               "assets/images/porsche.png",
-                //               TipsContent.kTipsFlexible),
-                //           _tipsCard(
-                //               "Pengenalan Customer Service dan bagaimana cara kerjanya",
-                //               "assets/images/porsche.png",
-                //               TipsContent.kTipsCS),
-                //           _tipsCard(
-                //               "Tips mendapatkan uang tambahan yang signifikan di Paruhwaktu",
-                //               "assets/images/porsche.png",
-                //               TipsContent.kTipsMoney),
-                //         ],
-                //       ),
-                //     ),
-                //   ],
-                // ),
-                // _mainMenu(context),
-                // _pencapaianText(),
-                // _pencapaian(),
-                // _activityList(),
-                
-              ],
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(left: 12.0, right: 10.0, bottom: 10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            dynamicText('NEWS & EVENT',
+                              fontSize: 16,
+                              // fontWeight: FontWeight.w700,
+                              fontFamily: "Oswald",
+                              color: Colors.black87),
+                            dynamicText('VIEW ALL',
+                              fontSize: 12,
+                              // fontWeight: FontWeight.w700,
+                              fontFamily: "Oswald",
+                              color: Colors.orange[800]),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.width / 2.4,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: <Widget>[
+                            _tipsCard(
+                                "PENTINGNYA TEKNOLOGI MIMAMORI PADA KENDARAAN KOMERSIAL",
+                                "assets/images/promo/promo-3.jpg",
+                                TipsContent.promo1),
+                            _tipsCard(
+                                "ISUZU KUASAI BANYAK PASAR GLOBAL",
+                                "assets/images/promo/promo-1.jpg",
+                                TipsContent.promo2),
+                            _tipsCard(
+                                "ISUZU SANGAT SIAP MENGHADAPI STANDAR EURO 4",
+                                "assets/images/promo/promo-2.jpg",
+                                TipsContent.promo3),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  // Column(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   crossAxisAlignment: CrossAxisAlignment.start,
+                  //   children: <Widget>[
+                  //     Padding(
+                  //       padding: EdgeInsets.only(left: 12.0, right: 10.0, bottom: 10.0),
+                  //       child: Row(
+                  //         children: <Widget>[
+                  //           dynamicText('News & Event',
+                  //             fontSize: 16,
+                  //             fontWeight: FontWeight.w700,
+                  //             color: Colors.black87),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //     Container(
+                  //       height: MediaQuery.of(context).size.width / 2.2,
+                  //       child: ListView(
+                  //         scrollDirection: Axis.horizontal,
+                  //         children: <Widget>[
+                  //           _tipsCard(
+                  //               "Tips bekerja secara fleksibel di Paruhwaktu",
+                  //               "assets/images/porsche.png",
+                  //               TipsContent.kTipsFlexible),
+                  //           _tipsCard(
+                  //               "Pengenalan Customer Service dan bagaimana cara kerjanya",
+                  //               "assets/images/porsche.png",
+                  //               TipsContent.kTipsCS),
+                  //           _tipsCard(
+                  //               "Tips mendapatkan uang tambahan yang signifikan di Paruhwaktu",
+                  //               "assets/images/porsche.png",
+                  //               TipsContent.kTipsMoney),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // _mainMenu(context),
+                  // _pencapaianText(),
+                  // _pencapaian(),
+                  // _activityList(),
+                  
+                ],
+              ),
             ),
           ),
+          _buildDraggableScrollableSheet()
+          ]
         ),
       ),
     );
@@ -669,5 +674,36 @@ Container _menuUtama(BuildContext context) {
         ),
       ),
     ),
+  );
+}
+
+DraggableScrollableSheet _buildDraggableScrollableSheet() {
+  return DraggableScrollableSheet(
+    initialChildSize: 0.8,
+    minChildSize: 0.5,
+    maxChildSize: 0.8,
+    builder: (BuildContext context, ScrollController scrollController) {
+      return Container(
+        decoration: BoxDecoration(
+          color: Colors.yellowAccent,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(10)
+          )
+        ),
+        child: Scrollbar(
+          child: ListView.builder(
+            controller: scrollController,
+            itemCount: 20,
+            itemBuilder: (BuildContext context, int idx) {
+              return ListTile(
+                leading: Icon(Icons.ac_unit),
+                title: Text('item $idx'),
+              );
+            }
+          )
+        ),
+      );
+    }
   );
 }

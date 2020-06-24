@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:isuzu/dashboard/personel.dart';
 import 'package:isuzu/utils/splash.dart';
 
 void main() { 
@@ -15,7 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      home: Personel(),
+      
     );
   }
 }
